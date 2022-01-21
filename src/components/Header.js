@@ -5,12 +5,31 @@ const Header = () => {
 const APIkey=  `LKKqCYuOSAZMKxhZYmxzS6pyuueWZVOU7HZfKphT`   
 const url = `https://api.nasa.gov/planetary/apod?api_key=`
 const url2 = url + APIkey
-const [photo, setPhoto]= useState()
+const [photo, setPhoto]= useState({})
+console.log(url2)
+console.log(photo)
 
-useEffect(() => {fetch(url2).then((res) => res.json())
-    .then((json)=> setPhoto(json)).catch(console.error)}, []);
+// useEffect(() => {fetch(url2).then((res) => res.json())
+//     .then((json)=> setPhoto(json)).catch(console.error)}, []);
 
-    console.log(photo)
+useEffect(()=> {
+    fetch(url2)
+    .then((res)=> {
+        console.log(res)
+        return res.json()
+    })
+    .then((json)=>{
+        console.log(json)
+        setPhoto(json)
+    })
+}, [])     //[] indicates that all of these tasks within the useEffect will run 
+            //on the initial component render 
+
+console.log(photo)
+
+useEffect(()=> {(console.log(photo))}, [photo])    //this second useEffect will fire on the initial component render and tracks if there is change 
+                                                    //to the photo 
+                                                    //component will render anytime there is change to state 
 
 if(!photo){
     return <p>Loading from space</p>
@@ -22,12 +41,13 @@ if(!photo){
         <h1 className="header"> IT'S ALL IN THE STARS</h1>
             <div className="image">
                 <div className="image-card">
-                    <img src="https://apod.nasa.gov/apod/image/2201/IMG_9447_1024.jpg"
+                    <img src={photo.url}
                         alt="of the day"
                         />
                 </div>
                 <div className="photo-description">
-                    <h2>This is the photo of the day</h2>
+                    <h2 className="photo-explanation">{photo.explanation}</h2>  
+                    {/* will replace this with the actual description */}
                 </div>
             </div>
         </header>

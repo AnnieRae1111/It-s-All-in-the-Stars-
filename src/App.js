@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Horoscopes from './components/Horoscopes';
+import HoroscopesList from './components/HoroscopesList';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
+import { Route, Routes} from 'react-router-dom'
+
 
 function App() {
   return (
@@ -12,8 +14,13 @@ function App() {
       <Header />
       </section>
       <section className="horoscopes-section">
-      <Horoscopes />
+      <HoroscopesList />
       </section>
+      <main>
+        <Routes>
+          <Route path="/"></Route>
+        </Routes>
+      </main>
 
 
     </div>
