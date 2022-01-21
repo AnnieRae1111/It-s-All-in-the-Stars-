@@ -60,7 +60,6 @@ Monotone blues:
 .button-container{
   display:flex;
   margin-top: 4%;
-
   
 }
 
@@ -73,6 +72,12 @@ Monotone blues:
   background-color: black;
   align-items: center;
   justify-content: center;
+}
+
+.horoscopes-title{
+  color:white;
+  text-align:center;
+
 }
 
 
