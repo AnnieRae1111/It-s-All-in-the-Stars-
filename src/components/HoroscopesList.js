@@ -20,37 +20,56 @@ const fetchHoroscopes = async (day, signName, image) => {
             "x-rapidapi-key": "addf17c4a4mshc34130c700cef07p1c7740jsn48f54a7eecb3"
         }
     })
-    console.log("Here is registerResponse:", horoscopeResponse)
+    console.log("Here is horoscopeResponse:", horoscopeResponse)
     const horoscopeJson = await horoscopeResponse.json()
-    
-    console.log("Here is registerJson:", horoscopeJson)
-        setHoroscopes(horoscopeJson)
 
+    horoscopeJson.sign = signName;
+    horoscopeJson.image = image;
+
+    
+    console.log("Here is horoscopeJson:", horoscopeJson)
+        setHoroscopes(horoscopes => [...horoscopes, horoscopeJson])
+        //when setting horoscopes im refering to the horscopes variable in use state 
+        //for this horoscopes array i want to keep everythign in there and then add new json data 
+        //how to add to an array in state react//
         
     }
 
-    useEffect(() => {
-        fetchHoroscopes()
-    }, [])
-
-console.log(horoscopes, "this should have all the horoscopes")
 
 useEffect( () => { 
-    signs.map((sign) => {
-        return(
-            fetchHoroscopes( day, sign.name, sign.image)  //mapping over signs array 
-
-        )
-
+    signs.forEach((sign) => {
+            fetchHoroscopes( day, sign.name, sign.image,)  //mapping over signs array to return image and sign name 
+                                                            //looping : on each iteration we are calling to the function to add to our array 
     })  
-console.log(horoscopes,"useEffect")
-
-}, [day]  )
+// console.log(horoscopes,"useEffect")
 
 
+}, [day]  )  //don't apply effect if there have been no changes to the day//
+
+useEffect(()=> {
+    console.log(horoscopes, "this should have all the horoscopes")
+
+},[horoscopes])
+
+console.log(horoscopes)
+
+const allHoroscopes = horoscopes.map((item, index) =>{
+    return(
+        <HoroscopeCard 
+        date_range={horoscopes.date_range}
+        name= {horoscopes.sign}
+        image = {horoscopes[0].image}
+        />
+    )
+})
+
+
+//NEXT STEP: create a .map over horsocopes in state , on line 51 and for each map iteration return 
+// a new horoscope component and 
 
 // useEffect(() => {fetch(url2).then((res) => res.json())
 //     .then((json)=> setHoroscopes([...horoscopes, ...json])).catch(console.error)}, []);
+
 
     return(
     <div className="container">
@@ -61,10 +80,7 @@ console.log(horoscopes,"useEffect")
             <button className="button tomorrow">Tomorrow</button>
         </div>
         <div>
-        <HoroscopeCard 
-        date_range= {horoscopes.date_range}
-        image={signs.image} />
-
+            {allHoroscopes}
         </div>
     </div>
 
@@ -72,3 +88,5 @@ console.log(horoscopes,"useEffect")
 }
 
 export default HoroscopesList
+
+//put .map in <HoroscopeCard to return all the cards?// 
