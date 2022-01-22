@@ -16,9 +16,8 @@ from 'reactstrap'
 const HoroscopeCard = ({sign, mood, image, description, date_range, current_date, compatibility, color }) => {
     
     return(
-        <Container>
-        <Row>
-        <Col xl="4" > 
+
+        <Col > 
         <CardColumns>
             <Card className="horoscope-card">
                 <CardImg
@@ -50,9 +49,7 @@ const HoroscopeCard = ({sign, mood, image, description, date_range, current_date
         </CardColumns>
     
         </Col>
-        </Row>
-        </Container>
-
+      
     )
 }
 

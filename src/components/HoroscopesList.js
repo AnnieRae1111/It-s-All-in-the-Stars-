@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import signs from '../context/signs'
 import HoroscopeCard from './HoroscopeCard'
+import {Container, Row } from 'reactstrap'
 
 
 const HoroscopesList = () => {
@@ -56,9 +57,9 @@ console.log(horoscopes)
 const allHoroscopes = horoscopes.map((item, index) =>{
     return(
         <HoroscopeCard 
-        date_range={horoscopes.date_range}
-        name= {horoscopes.sign}
-        image = {horoscopes[0].image}
+        date_range={item.date_range}
+        sign= {item.sign}
+        image = {item.image}
         />
     )
 })
@@ -80,7 +81,12 @@ const allHoroscopes = horoscopes.map((item, index) =>{
             <button className="button tomorrow">Tomorrow</button>
         </div>
         <div>
-            {allHoroscopes}
+            <Container>
+                <Row xl="3">
+                {allHoroscopes}
+                </Row>
+            </Container>
+            
         </div>
     </div>
 
