@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import HoroscopesList from './HoroscopesList'
 
 
 const Header = () => {
@@ -51,6 +52,9 @@ if(!photo){
                 </div>
             </div>
         </header>
+        {/* <section className="horoscopes-section">
+        <HoroscopesList />
+        </section> */}
         </section>
     )
 }

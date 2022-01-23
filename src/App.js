@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { Route, Routes} from 'react-router-dom'
 
 
+
 function App() {
   return (
     <div id="app">
@@ -13,12 +14,13 @@ function App() {
       <section className="header-section">
       <Header />
       </section>
-      <section className="horoscopes-section">
+      {/* <section className="horoscopes-section">
       <HoroscopesList />
-      </section>
+      </section> */}
       <main>
         <Routes>
-          <Route path="/"></Route>
+          <Route path="/home/:day" element={<HoroscopesList/>} />
+          <Route path="/home"/>
         </Routes>
       </main>
 

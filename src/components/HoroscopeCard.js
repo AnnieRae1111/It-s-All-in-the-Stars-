@@ -34,10 +34,13 @@ const HoroscopeCard = ({sign, mood, image, description, date_range, current_date
                     className="mb-2 text-muted"
                     tag="h6"
                 >
-                <strong>Compatibility:</strong> {compatibility}
+                <strong>Current Date:</strong> {current_date}
                 </CardSubtitle>
                 <CardText>
                     <strong>Date Range:</strong> {date_range}
+                </CardText>
+                <CardText>
+                <strong>Compatibility:</strong> {compatibility}
                 </CardText>
                 <CardText>
                     <strong>Description:</strong> {description}

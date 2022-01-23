@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import signs from '../context/signs'
 import HoroscopeCard from './HoroscopeCard'
 import {Container, Row } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import Yesterday from './Yesterday'
+
 
 
 const HoroscopesList = () => {
@@ -21,14 +24,14 @@ const fetchHoroscopes = async (day, signName, image) => {
             "x-rapidapi-key": "addf17c4a4mshc34130c700cef07p1c7740jsn48f54a7eecb3"
         }
     })
-    console.log("Here is horoscopeResponse:", horoscopeResponse)
+    // console.log("Here is horoscopeResponse:", horoscopeResponse)
     const horoscopeJson = await horoscopeResponse.json()
 
     horoscopeJson.sign = signName;
     horoscopeJson.image = image;
 
     
-    console.log("Here is horoscopeJson:", horoscopeJson)
+    // console.log("Here is horoscopeJson:", horoscopeJson)
         setHoroscopes(horoscopes => [...horoscopes, horoscopeJson])
         //when setting horoscopes im refering to the horscopes variable in use state 
         //for this horoscopes array i want to keep everythign in there and then add new json data 
@@ -41,14 +44,14 @@ useEffect( () => {
     signs.forEach((sign) => {
             fetchHoroscopes( day, sign.name, sign.image,)  //mapping over signs array to return image and sign name 
                                                             //looping : on each iteration we are calling to the function to add to our array 
-    })  
+    }, [])  
 // console.log(horoscopes,"useEffect")
 
 
 }, [day]  )  //don't apply effect if there have been no changes to the day//
 
 useEffect(()=> {
-    console.log(horoscopes, "this should have all the horoscopes")
+    // console.log(horoscopes, "this should have all the horoscopes")
 
 },[horoscopes])
 
@@ -60,6 +63,9 @@ const allHoroscopes = horoscopes.map((item, index) =>{
         date_range={item.date_range}
         sign= {item.sign}
         image = {item.image}
+        compatibility={item.compatibility}
+        description={item.description}
+        current_date={item.current_date}
         />
     )
 })
@@ -75,11 +81,14 @@ const allHoroscopes = horoscopes.map((item, index) =>{
     return(
     <div className="container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
-        <div className="button-container">
-            <button className="button yesterday">Yesterday</button>
-            <button className="button today">Today</button>
-            <button className="button tomorrow">Tomorrow</button>
+        <Link to={`/home/${day}`}>
+            <div className="button-container">
+                <button className="button yesterday" onClick={() => setDay("yesterday")}>Yesterday</button>
+                <button className="button today" onClick={() => setDay("today")}>Today</button>
+                <button className="button tomorrow"  onClick={() => setDay("tomorrow")}>Tomorrow</button>
+            
         </div>
+        </Link>    
         <div>
             <Container>
                 <Row xl="3">

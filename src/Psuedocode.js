@@ -14,6 +14,8 @@
    //Horoscope cards: 
         //12 with an image attached to them along with the descriptoin 
 
+// for each button will need an onClick function that shows the horoscops cards for that day 
+// wrap the button in a link with the to set to the route path that uses the day params 
     //12 signs: 
     //aquarius     libra
     //aries         scorpio
