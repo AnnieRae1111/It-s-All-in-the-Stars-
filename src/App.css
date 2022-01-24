@@ -96,7 +96,10 @@ button.button{
     
   }
 
-
+.header-title{
+  color:white;
+  text-shadow: 4px 4px 6px #f6f3e6;
+}
 
 .this-week{
   color: white;
@@ -147,7 +150,7 @@ button.button{
 .photo-of-the-day{
   margin-top: 50px;
   margin-bottom: 100px;
-  border: 2px solid white;
+  border:2px solid white;
   /* height:400px;
   width:500px; */
 }
@@ -189,6 +192,10 @@ button.button{
   margin: 0 20px 0 20px;
 
   
+}
+
+button:hover {
+  box-shadow: 5px 10px 10px #888888; ;
 }
 
 .horoscope-card{
