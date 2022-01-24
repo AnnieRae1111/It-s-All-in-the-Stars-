@@ -58,8 +58,9 @@ button.button{
   }
 
   body{
-    /* background-color:#ACEBF2; */
-    background-color: black;
+    background-color: #f6f3e6;
+    /* background-color:#ACEBF2;
+    background-color: black; */
   }
 
   ul{
@@ -67,6 +68,11 @@ button.button{
 
   }
   
+  .horoscopes-section{
+    background-color: black;
+    
+   
+  }
   
   .app{
     display:flex;
@@ -74,6 +80,7 @@ button.button{
 
  
   .nav{
+    border: 2px solid black;
     background-color: #f6f3e6;
     width:100%;
     height: 60px;
@@ -97,8 +104,12 @@ button.button{
   }
 
 .header-title{
-  color:white;
-  text-shadow: 4px 4px 6px #f6f3e6;
+
+  font-family: 'Playfair Display', serif;
+  /* font-family: 'Manrope', sans-serif; */
+  color: black;
+  text-shadow: 4px 4px 6px #464444;
+  margin-top: 40px;
 }
 
 .this-week{
@@ -131,10 +142,12 @@ button.button{
 } */
 
 .horoscopes-container{
-  margin-top: 0px;
+  margin-top: 50px;
 }
 
 .horoscopes-title{
+  font-family: 'Playfair Display', serif;
+  font-size:35px;
   color:white;
   text-align:center;
   margin-top: 150px;
@@ -143,14 +156,21 @@ button.button{
 
 /* NASA API */
 .image-card{
-  background-color: black;
+  background-color: #f6f3e6;;
+  /* background-color: black; */
   height:  1000px;
+
 }
 
+.page-title-info{
+  margin-top: 30px;
+  color:black;
+}
 .photo-of-the-day{
   margin-top: 50px;
   margin-bottom: 100px;
-  border:2px solid white;
+  border:2px solid black;
+  border-radius: 500px 500px 0 0;
   /* height:400px;
   width:500px; */
 }
@@ -164,9 +184,11 @@ button.button{
   padding: 1rem 0 0 0;
   color:black;
   text-transform: uppercase;
+ 
 }
 
 .photo-explanation{
+  border-bottom: 2px solid black;
   font-size: 20px;
   color: black;
   /* border: 2px solid white; */
@@ -179,6 +201,7 @@ button.button{
 
 
 .button{
+  font-family: 'Playfair Display', serif;
   outline: none;
   border: 3px solidd #d29e45;
   /* background-color:  #50A0BF; */

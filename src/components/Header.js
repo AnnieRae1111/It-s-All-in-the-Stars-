@@ -39,6 +39,7 @@ if(!photo){
         <section className="photo-container">
         <header className="header">
         <h1 className="header-title"> IT'S ALL IN THE STARS</h1>
+        <p className="page-title-info">Check out the Astronomy Photo of the Day brought to you by NASA</p>
             <div className="image">
                 <div className="image-card">
                     <img className="photo-of-the-day" src={photo.url}
