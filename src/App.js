@@ -17,13 +17,13 @@ function App() {
       <section className="header-section">
       <Header />
       </section>
-      <section className="horoscopes-section">
+      {/* <section className="horoscopes-section">
       <HoroscopesList />
-      </section>
+      </section> */}
       <main>
         <Routes>
-          <Route path="/home/:day" element={<HoroscopesList/>} />
-          <Route path="/home"/>
+          {/* <Route path="/home/:day" element={<HoroscopesList/>} /> */}
+          <Route path="/home"element={<HoroscopesList/>}/>
         </Routes> 
       </main>
 

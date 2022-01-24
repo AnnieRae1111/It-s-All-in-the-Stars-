@@ -12,14 +12,44 @@ Monotone blues:
 #6AC4D9 - lighter
 #ACEBF2 -lightest 
 
-
+Neutrals: 
+tan/background: #f6f3e6
+pale pink/buttons: #f5f0f0
+mauve: #e3cacf
 
 
 */
 
 
 
-/* @media screen and(max-width: 767px){ */
+/* Mobile Phones */
+@media screen and(max-width: 500px){ 
+
+.photo-explanation{
+  margin: 0px 10px 0px 10px;
+  font-size: 13px; 
+}
+
+button.button{
+  border: 1px solid #ACEBF2;
+  background-color:  #50A0BF;
+  flex-grow: 1;
+  padding: 1rem;
+  border-radius: 20px;
+  font-size: 10px;
+  color: white;
+  /* margin-top: 100px; */
+  margin: 0 10px 0 10px;
+
+
+
+  
+}
+
+  
+}
+  
+
   
   *{
     box-sizing: border-box;
@@ -30,25 +60,32 @@ Monotone blues:
   body{
     /* background-color:#ACEBF2; */
     background-color: black;
-   
   }
+
+  ul{
+    text-decoration: none;
+
+  }
+  
   
   .app{
     display:flex;
   }
 
-
+ 
   .nav{
-    background-color:#50A0BF;
+    background-color: #f6f3e6;
     width:100%;
     height: 60px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   
   }
   
+
   .nav-item a {
-    color: white;
+    color: black;
+    justify-content: flex-end;
   }
 
   .header{
@@ -59,10 +96,24 @@ Monotone blues:
     
   }
 
+
+
+.this-week{
+  color: white;
+  text-align: center;
+  font-size: 20px; 
+  margin-top: 30px;
+}  
+
 .button-container{
   display:flex;
   margin-top: 150px;
+  text-decoration: none;
 
+}
+
+.link-buttons{
+  text-decoration: none;
 }
 
 /* .header-section{
@@ -75,6 +126,10 @@ Monotone blues:
   align-items: center;
   justify-content: center;
 } */
+
+.horoscopes-container{
+  margin-top: 0px;
+}
 
 .horoscopes-title{
   color:white;
@@ -89,32 +144,47 @@ Monotone blues:
   height:  1000px;
 }
 
-img{
+.photo-of-the-day{
   margin-top: 50px;
+  margin-bottom: 100px;
   border: 2px solid white;
   /* height:400px;
   width:500px; */
 }
 
+.photo-description-container{
+  background-color: #f6f3e6;
+}
+
+.about-this-photo{
+  margin: 100px 60px 0 60px; 
+  padding: 1rem 0 0 0;
+  color:black;
+  text-transform: uppercase;
+}
+
 .photo-explanation{
-  font-size: 25px;
-  border: 2px solid white;
-  background-color:#ACEBF2;
+  font-size: 20px;
+  color: black;
+  /* border: 2px solid white; */
+  /* background-color:#ACEBF2; */
+  /* background-color: #f6f3e6; */
   padding: 2rem;
-  margin: 0 40px 0 40px; 
+  margin: 0px 60px 0 60px; 
 }
 
 
 
 .button{
-  border: 3px solid #ACEBF2;
-  background-color:  #50A0BF;
+  outline: none;
+  border: 3px solidd #d29e45;
+  /* background-color:  #50A0BF; */
+  background-color: #f6f3e6;
   width:25%;
   flex-grow: 1;
   padding: 1rem;
   border-radius: 20px;
   font-size: 25px;
-  color: white;
   /* margin-top: 100px; */
   margin: 0 20px 0 20px;
 
@@ -122,7 +192,8 @@ img{
 }
 
 .horoscope-card{
-  border: 2px solid white;
+  border: 2px solid #f6f3e6;
+  background-color: #f6f3e6;
   margin-top: 50px;
 }
 

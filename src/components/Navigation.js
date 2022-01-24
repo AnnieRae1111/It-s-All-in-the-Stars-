@@ -14,12 +14,12 @@ const Navigation = () => {
     return (  
     <Nav className="navigation-bar">
         <NavItem>
-            <NavLink href="/">
+            <NavLink className="left" href="/">
                 HOME
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink>
+            <NavLink clsasName="left">
                 ABOUT
             </NavLink>
         </NavItem>

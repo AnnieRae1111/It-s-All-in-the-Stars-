@@ -11,8 +11,6 @@ const [photo, setPhoto]= useState({})
 console.log(url2)
 console.log(photo)
 
-// useEffect(() => {fetch(url2).then((res) => res.json())
-//     .then((json)=> setPhoto(json)).catch(console.error)}, []);
 
 useEffect(()=> {
     fetch(url2)
@@ -40,22 +38,23 @@ if(!photo){
     return(
         <section className="photo-container">
         <header className="header">
-        <h1 className="header"> IT'S ALL IN THE STARS</h1>
+        <h1 className="header-title"> IT'S ALL IN THE STARS</h1>
             <div className="image">
                 <div className="image-card">
-                    <img src={photo.url}
+                    <img className="photo-of-the-day" src={photo.url}
                         alt="of the day"
                         />
                 </div>
-                <div className="photo-description">
-                    <h2 className="photo-explanation">{photo.explanation}</h2>  
+                <div className="photo-description-container">
+                    <h2 className="about-this-photo"> About this image:</h2>
+                    <p className="photo-explanation">{photo.explanation}</p>  
                     {/* will replace this with the actual description */}
                 </div>
             </div>
         </header>
-        {/* <section className="horoscopes-section">
+        <section className="horoscopes-section">
         <HoroscopesList />
-        </section> */}
+        </section>
         </section>
     )
 }

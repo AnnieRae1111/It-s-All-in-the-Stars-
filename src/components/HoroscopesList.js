@@ -89,15 +89,17 @@ const clickTomorrow = () => {
     setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
     setDay("tomorrow")
 
-}
+} 
 
 
 
 
     return(
-    <div className="container">
+        <Container>
+    <div className="horoscopes-container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
-        <Link to={`/home/${day}`}>
+        <p className="this-week">What's in the stars for you this week? For centuries humans have looked to the stars for guidance and wisdome.  Click a button below to display this weeks daily horoscopes. </p>
+        <Link className="link-buttons" to={`/home/${day}`}>
             <div className="button-container">
                 <button type="button" className="button yesterday" onClick={()=> {clickYesterday()}}>Yesterday</button>
                 <button type="button" className="button today" onClick={()=> {clickToday()}}>Today</button>
@@ -106,14 +108,15 @@ const clickTomorrow = () => {
         </div>
         </Link>    
         <div>
-            <Container>
+            {/* <Container> */}
                 <Row xl="3">
                 {allHoroscopes}
                 </Row>
-            </Container>
+            {/* </Container> */}
             
         </div>
     </div>
+    </Container>
 
     )
 }
