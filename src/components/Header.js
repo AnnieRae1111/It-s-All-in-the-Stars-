@@ -3,9 +3,10 @@ import HoroscopesList from './HoroscopesList'
 
 
 const Header = () => {
-const APIkey=  `LKKqCYuOSAZMKxhZYmxzS6pyuueWZVOU7HZfKphT`   
+// const API_KEY= process.env.REACT_APP_NASA_API_KEY  
+const API_KEY='LKKqCYuOSAZMKxhZYmxzS6pyuueWZVOU7HZfKphT'
 const url = `https://api.nasa.gov/planetary/apod?api_key=`
-const url2 = url + APIkey
+const url2 = url + API_KEY
 const [photo, setPhoto]= useState({})
 console.log(url2)
 console.log(photo)

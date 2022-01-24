@@ -1,5 +1,8 @@
 
 const Yesterday = () => {
+
+
+
     return(
         <div className="container">
             <div className ="yesterday-horoscopes">

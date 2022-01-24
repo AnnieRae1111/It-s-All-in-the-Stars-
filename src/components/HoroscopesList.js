@@ -4,6 +4,7 @@ import HoroscopeCard from './HoroscopeCard'
 import {Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import Yesterday from './Yesterday'
+import { useParams } from 'react-router-dom'
 
 
 
@@ -21,7 +22,8 @@ const fetchHoroscopes = async (day, signName, image) => {
         "method": "POST",
         "headers": {
             "x-rapidapi-host": "sameer-kumar-aztro-v1.p.rapidapi.com",
-            "x-rapidapi-key": "addf17c4a4mshc34130c700cef07p1c7740jsn48f54a7eecb3"
+            "x-rapidapi-key": process.env.REACT_APP_AZTRO_API_KEY
+            // "x-rapidapi-key": "addf17c4a4mshc34130c700cef07p1c7740jsn48f54a7eecb3"
         }
     })
     // console.log("Here is horoscopeResponse:", horoscopeResponse)
@@ -36,6 +38,7 @@ const fetchHoroscopes = async (day, signName, image) => {
         //when setting horoscopes im refering to the horscopes variable in use state 
         //for this horoscopes array i want to keep everythign in there and then add new json data 
         //how to add to an array in state react//
+        //make one array with all 12 horoscopes returned in it 
         
     }
 
@@ -44,11 +47,10 @@ useEffect( () => {
     signs.forEach((sign) => {
             fetchHoroscopes( day, sign.name, sign.image,)  //mapping over signs array to return image and sign name 
                                                             //looping : on each iteration we are calling to the function to add to our array 
-    }, [])  
-// console.log(horoscopes,"useEffect")
-
+    })  
 
 }, [day]  )  //don't apply effect if there have been no changes to the day//
+
 
 useEffect(()=> {
     // console.log(horoscopes, "this should have all the horoscopes")
@@ -57,7 +59,7 @@ useEffect(()=> {
 
 console.log(horoscopes)
 
-const allHoroscopes = horoscopes.map((item, index) =>{
+const allHoroscopes = horoscopes.map((item) =>{         //do .map in this functiona andd return the function in jsx to render on the component
     return(
         <HoroscopeCard 
         date_range={item.date_range}
@@ -65,17 +67,31 @@ const allHoroscopes = horoscopes.map((item, index) =>{
         image = {item.image}
         compatibility={item.compatibility}
         description={item.description}
-        current_date={item.current_date}
+        current_date={item.current_date }
         />
     )
 })
 
 
-//NEXT STEP: create a .map over horsocopes in state , on line 51 and for each map iteration return 
-// a new horoscope component and 
+const clickYesterday = () => {
+    setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
+    setDay("yesterday")
 
-// useEffect(() => {fetch(url2).then((res) => res.json())
-//     .then((json)=> setHoroscopes([...horoscopes, ...json])).catch(console.error)}, []);
+}
+
+const clickToday = () => {
+    setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
+    setDay("today")
+
+}
+
+const clickTomorrow = () => {
+    setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
+    setDay("tomorrow")
+
+}
+
+
 
 
     return(
@@ -83,9 +99,9 @@ const allHoroscopes = horoscopes.map((item, index) =>{
         <h2 className="horoscopes-title">HOROSCOPES</h2>
         <Link to={`/home/${day}`}>
             <div className="button-container">
-                <button className="button yesterday" onClick={() => setDay("yesterday")}>Yesterday</button>
-                <button className="button today" onClick={() => setDay("today")}>Today</button>
-                <button className="button tomorrow"  onClick={() => setDay("tomorrow")}>Tomorrow</button>
+                <button type="button" className="button yesterday" onClick={()=> {clickYesterday()}}>Yesterday</button>
+                <button type="button" className="button today" onClick={()=> {clickToday()}}>Today</button>
+                <button type="button" className="button tomorrow"  onClick={()=> {clickTomorrow()}}>Tomorrow</button>
             
         </div>
         </Link>    
