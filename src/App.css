@@ -20,34 +20,6 @@ mauve: #e3cacf
 
 */
 
-
-
-/* Mobile Phones */
-@media screen and(max-width: 500px){ 
-
-.photo-explanation{
-  margin: 0px 10px 0px 10px;
-  font-size: 13px; 
-}
-
-button.button{
-  border: 1px solid #ACEBF2;
-  background-color:  #50A0BF;
-  flex-grow: 1;
-  padding: 1rem;
-  border-radius: 20px;
-  font-size: 10px;
-  color: white;
-  /* margin-top: 100px; */
-  margin: 0 10px 0 10px;
-
-
-
-  
-}
-
-  
-}
   
 
   
@@ -63,22 +35,14 @@ button.button{
     background-color: black; */
   }
 
-  ul{
-    text-decoration: none;
-
-  }
   
-  .horoscopes-section{
-    background-color: black;
-    
-   
-  }
   
   .app{
     display:flex;
   }
 
- 
+/*--------- Nav and header ---------*/
+
   .nav{
     border: 2px solid black;
     background-color: #f6f3e6;
@@ -104,13 +68,17 @@ button.button{
   }
 
 .header-title{
-
   font-family: 'Playfair Display', serif;
   /* font-family: 'Manrope', sans-serif; */
   color: black;
   text-shadow: 4px 4px 6px #464444;
   margin-top: 40px;
 }
+
+
+
+
+/*--------- HOROSCOPES ---------*/
 
 .this-week{
   color: white;
@@ -130,16 +98,12 @@ button.button{
   text-decoration: none;
 }
 
-/* .header-section{
-  height: 400px;
-} */
-
-/* .horoscopes-section{
-  height: 400px;
+.horoscopes-section{
   background-color: black;
-  align-items: center;
-  justify-content: center;
-} */
+
+  
+
+}
 
 .horoscopes-container{
   margin-top: 50px;
@@ -152,52 +116,8 @@ button.button{
   text-align:center;
   margin-top: 150px;
 
-}
-
-/* NASA API */
-.image-card{
-  background-color: #f6f3e6;;
-  /* background-color: black; */
-  height:  1000px;
 
 }
-
-.page-title-info{
-  margin-top: 30px;
-  color:black;
-}
-.photo-of-the-day{
-  margin-top: 50px;
-  margin-bottom: 100px;
-  border:2px solid black;
-  border-radius: 500px 500px 0 0;
-  /* height:400px;
-  width:500px; */
-}
-
-.photo-description-container{
-  background-color: #f6f3e6;
-}
-
-.about-this-photo{
-  margin: 100px 60px 0 60px; 
-  padding: 1rem 0 0 0;
-  color:black;
-  text-transform: uppercase;
- 
-}
-
-.photo-explanation{
-  border-bottom: 2px solid black;
-  font-size: 20px;
-  color: black;
-  /* border: 2px solid white; */
-  /* background-color:#ACEBF2; */
-  /* background-color: #f6f3e6; */
-  padding: 2rem;
-  margin: 0px 60px 0 60px; 
-}
-
 
 
 .button{
@@ -227,33 +147,97 @@ button:hover {
   margin-top: 50px;
 }
 
-  /*   
-} */
 
 
-/* @media screen and( min-width:768px) {
-  .app{
-    display:flex;
-  }
-  
-  
+/*--------- NASA STUFF ---------*/
+
+.copyright-title-info,
+.photo-title-info {
+  font-weight: 500;
+  color: black;
+
+}
+
+.photo-title-info{
+  margin-top: 30px;
+}
+
+.image-card{
+  background-color: #f6f3e6;;
+  /* background-color: black; */
+  height:  1000px;
+
+}
+
+.page-title-info{
+  margin-top: 30px;
+  color:black;
+}
+.photo-of-the-day{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border:2px solid black;
+  border-radius: 500px 500px 0 0;
+  /* height:400px;
+  width:500px; */
+}
+
+.photo-description-container{
+  background-color: #f6f3e6;
+}
+
+.about-this-photo{
+  border-top: 2px solid black;
+  margin: 100px 60px 0 60px; 
+  padding: 1rem 0 0 0;
+  color:black;
+  text-transform: uppercase;
+
+}
+
+.photo-explanation{
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  color: black;
+  /* border: 2px solid white; */
+  /* background-color:#ACEBF2; */
+  /* background-color: #f6f3e6; */
+  padding: 2rem;
+  margin: 0px 60px 0 60px; 
+}
+
+
+/* Mobile Phones --------*/
+@media only screen and (max-width: 500px){ 
+
   .nav{
-    background-color: gray;
-    width:100%;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
+    background-color:red;
+  }
+  .photo-explanation{
+    margin: 0px 10px 0px 10px;
+    font-size: 13px; 
   
   }
   
-  .nav-item a {
+  .button{
+    flex-grow: 1;
+    padding: .5rem;
+    border-radius: 10px;
+    font-size: 11px;
     color: white;
-  }
-  .page-title{
-    text-align: left;
-  }
-
-
-
+    /* margin-top: 100px; */
+    margin: 0 10px 0 10px;
   
-} */
+  }
+  
+  .image-card{
+    height: 50%;
+  }
+  .photo-of-the-day{
+    height: 300px;
+    width: 300px;
+  }
+    
+  }
+
+

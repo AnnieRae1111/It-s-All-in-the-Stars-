@@ -5,6 +5,7 @@ import {Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import Yesterday from './Yesterday'
 import { useParams } from 'react-router-dom'
+import Header from './Header'
 
 
 
@@ -95,6 +96,9 @@ const clickTomorrow = () => {
 
 
     return(
+        <>
+        <section className="horoscopes-section">
+
         <Container>
     <div className="horoscopes-container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
@@ -109,7 +113,7 @@ const clickTomorrow = () => {
         </Link>    
         <div>
             {/* <Container> */}
-                <Row xl="3">
+                <Row xl="3" xs="1">
                 {allHoroscopes}
                 </Row>
             {/* </Container> */}
@@ -117,6 +121,8 @@ const clickTomorrow = () => {
         </div>
     </div>
     </Container>
+    </section> 
+    </>
 
     )
 }

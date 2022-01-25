@@ -3,8 +3,8 @@ import HoroscopesList from './HoroscopesList'
 
 
 const Header = () => {
-// const API_KEY= process.env.REACT_APP_NASA_API_KEY  
-const API_KEY='LKKqCYuOSAZMKxhZYmxzS6pyuueWZVOU7HZfKphT'
+const API_KEY= process.env.REACT_APP_NASA_API_KEY  
+// const API_KEY='LKKqCYuOSAZMKxhZYmxzS6pyuueWZVOU7HZfKphT'
 const url = `https://api.nasa.gov/planetary/apod?api_key=`
 const url2 = url + API_KEY
 const [photo, setPhoto]= useState({})
@@ -39,7 +39,9 @@ if(!photo){
         <section className="photo-container">
         <header className="header">
         <h1 className="header-title"> IT'S ALL IN THE STARS</h1>
-        <p className="page-title-info">Check out the Astronomy Photo of the Day brought to you by NASA</p>
+        <p className="page-title-info">Want a glimpse into outerspace? Check out the Astronomy Photo of the Day brought to you by NASA.<br/>
+        If you want more cool photos, check back tomorrow for a new one.  </p>
+
             <div className="image">
                 <div className="image-card">
                     <img className="photo-of-the-day" src={photo.url}
@@ -48,14 +50,16 @@ if(!photo){
                 </div>
                 <div className="photo-description-container">
                     <h2 className="about-this-photo"> About this image:</h2>
+                    <p className="photo-title-info"><strong>Title:</strong> {photo.title}</p>
+                    <p className="copyright-title-info"><strong>Credit: </strong>{photo.copyright}</p>
                     <p className="photo-explanation">{photo.explanation}</p>  
                     {/* will replace this with the actual description */}
                 </div>
             </div>
         </header>
-        <section className="horoscopes-section">
+        {/* <section className="horoscopes-section">
         <HoroscopesList />
-        </section>
+        </section> */}
         </section>
     )
 }
