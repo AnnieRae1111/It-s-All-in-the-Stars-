@@ -175,6 +175,7 @@ button:hover {
 .page-title-info{
   margin-top: 30px;
   color:black;
+  font-size: 20px;
 }
 .photo-of-the-day{
   height: 700px;
@@ -212,6 +213,34 @@ button:hover {
 }
 
 
+/* -----About----- */
+.about-section{
+  justify-content: center;
+}
+
+.thankyou-for-visiting{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-text{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 23px;
+
+}
+
+.divine-feminine{
+  height: 500px;
+  width: 500px;
+  /* justify-content: center; */
+  margin: 0 auto;
+  margin-top: 60px;
+  display:block;
+  border-radius: 300px 300px 0 0;
+  
+}
+
 /* Mobile Phones --------*/
 @media only screen and (max-width: 500px){ 
 
@@ -247,7 +276,7 @@ button:hover {
     border:white;
     margin: 10px;
 
- 
+
   }
   
   .image-card{
@@ -258,6 +287,11 @@ button:hover {
     width: 400px;
   }
     
+  .video-of-the-day{
+
+    width: 80%;
+  }
+
   }
 
 
