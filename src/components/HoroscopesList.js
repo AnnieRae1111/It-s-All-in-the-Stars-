@@ -3,28 +3,19 @@ import signs from '../context/signs'
 import HoroscopeCard from './HoroscopeCard'
 import {Container, Row } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import Yesterday from './Yesterday'
-import { useParams } from 'react-router-dom'
-import Header from './Header'
-
-
 
 const HoroscopesList = () => {
-
 const [horoscopes, setHoroscopes]= useState([])
 const [day, setDay] = useState("today")
-
 
 const fetchHoroscopes = async (day, signName, image) => {
 
     const url = `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${signName}&day=${day}`
-
     const horoscopeResponse = await fetch(url,  {
         "method": "POST",
         "headers": {
             "x-rapidapi-host": "sameer-kumar-aztro-v1.p.rapidapi.com",
             "x-rapidapi-key": process.env.REACT_APP_AZTRO_API_KEY
-            // "x-rapidapi-key": "addf17c4a4mshc34130c700cef07p1c7740jsn48f54a7eecb3"
         }
     })
     // console.log("Here is horoscopeResponse:", horoscopeResponse)
@@ -44,21 +35,21 @@ const fetchHoroscopes = async (day, signName, image) => {
     }
 
 
-useEffect( () => { 
-    signs.forEach((sign) => {
-            fetchHoroscopes( day, sign.name, sign.image,)  //mapping over signs array to return image and sign name 
-                                                            //looping : on each iteration we are calling to the function to add to our array 
-    })  
+    useEffect( () => { 
+        signs.forEach((sign) => {
+                fetchHoroscopes( day, sign.name, sign.image,)  //mapping over signs array to return image and sign name 
+                                                                //looping : on each iteration we are calling to the function to add to our array 
+        })  
 
-}, [day]  )  //don't apply effect if there have been no changes to the day//
+    }, [day]  )  //don't apply effect if there have been no changes to the day//
 
 
-useEffect(()=> {
-    // console.log(horoscopes, "this should have all the horoscopes")
+    useEffect(()=> {
+        // console.log(horoscopes, "this should have all the horoscopes")
 
-},[horoscopes])
+    },[horoscopes])
 
-console.log(horoscopes)
+    console.log(horoscopes)
 
 const allHoroscopes = horoscopes.map((item) =>{         //do .map in this functiona andd return the function in jsx to render on the component
     return(
@@ -98,7 +89,6 @@ const clickTomorrow = () => {
     return(
         <>
         <section className="horoscopes-section">
-
         <Container>
     <div className="horoscopes-container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
@@ -112,12 +102,9 @@ const clickTomorrow = () => {
         </div>
         </Link>    
         <div>
-            {/* <Container> */}
                 <Row xl="3" xs="1">
                 {allHoroscopes}
                 </Row>
-            {/* </Container> */}
-            
         </div>
     </div>
     </Container>

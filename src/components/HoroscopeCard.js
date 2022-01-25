@@ -1,6 +1,4 @@
 import { 
-    Container, 
-    Row, 
     Col, 
     CardColumns, 
     Card, 
@@ -16,7 +14,6 @@ from 'reactstrap'
 const HoroscopeCard = ({sign, mood, image, description, date_range, current_date, compatibility, color }) => {
     
     return(
-
         <Col > 
         <CardColumns>
             <Card className="horoscope-card">
@@ -47,12 +44,8 @@ const HoroscopeCard = ({sign, mood, image, description, date_range, current_date
                 </CardText>
                 </CardBody>
         </Card>
-        <Card> 
-        </Card>
         </CardColumns>
-    
         </Col>
-      
     )
 }
 

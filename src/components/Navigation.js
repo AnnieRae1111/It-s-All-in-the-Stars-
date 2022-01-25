@@ -1,12 +1,8 @@
 import React from 'react'
-import { 
-
-    
+import {  
     Nav, 
     NavItem, 
     NavLink, 
-
-
 }
 from 'reactstrap'
 
@@ -26,11 +22,6 @@ const Navigation = () => {
         <NavItem>
             <NavLink clsasName="left" href="/about">
                 ABOUT
-            </NavLink>
-        </NavItem>
-        <NavItem>
-            <NavLink clsasName="left" href="/contact">
-                CONTACT
             </NavLink>
         </NavItem>
     </Nav>
