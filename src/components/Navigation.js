@@ -10,7 +10,7 @@ const Navigation = () => {
     return (  
     <Nav className="navigation-bar">
         <NavItem>
-            <NavLink className="left" href="/home">
+            <NavLink className="left" href="/">
                 HOME
             </NavLink>
         </NavItem>

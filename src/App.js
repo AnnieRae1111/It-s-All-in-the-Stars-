@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import HoroscopesList from './components/HoroscopesList';
 import Navigation from './components/Navigation';
-import Header from './components/Header';
 import { Route, Routes} from 'react-router-dom'
 import About from './components/About';
 import Main from './components/Main';
@@ -24,7 +23,7 @@ function App() {
       
         <Routes>
     
-          <Route path="/home"element={<Main/>}/>
+          <Route path="/"element={<Main/>}/>
           <Route path="/horoscopes"element={<HoroscopesList/>}/>
           <Route path="/about" element= {<About/>} />
 
