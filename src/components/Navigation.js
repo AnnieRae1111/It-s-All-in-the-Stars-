@@ -15,12 +15,12 @@ const Navigation = () => {
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink clsasName="left" href="/horoscopes">
+            <NavLink className="left" href="/horoscopes">
                 HOROSCOPES
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink clsasName="left" href="/about">
+            <NavLink className="left" href="/about">
                 ABOUT
             </NavLink>
         </NavItem>

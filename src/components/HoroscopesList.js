@@ -93,14 +93,14 @@ const clickTomorrow = () => {
     <div className="horoscopes-container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
         <p className="this-week">What's in the stars for you this week? For centuries humans have looked to the stars for guidance and wisdome.  Click a button below to display this weeks daily horoscopes. </p>
-        <Link className="link-buttons" to={`/home/${day}`}>
+
             <div className="button-container">
                 <button type="button" className="button yesterday" onClick={()=> {clickYesterday()}}>Yesterday</button>
                 <button type="button" className="button today" onClick={()=> {clickToday()}}>Today</button>
                 <button type="button" className="button tomorrow"  onClick={()=> {clickTomorrow()}}>Tomorrow</button>
             
         </div>
-        </Link>    
+
         <div>
                 <Row xl="3" xs="1">
                 {allHoroscopes}

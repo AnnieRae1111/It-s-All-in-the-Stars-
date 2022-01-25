@@ -21,13 +21,13 @@ function App() {
       <HoroscopesList />
       </section> */}
       <main>
+      
         <Routes>
-          {/* <Route path="/home/:day" element={<HoroscopesList/>} /> */}
+    
           <Route path="/home"element={<Main/>}/>
           <Route path="/horoscopes"element={<HoroscopesList/>}/>
           <Route path="/about" element= {<About/>} />
-          {/* <Route path="contact" element={<Contact/>} />
-            */}
+
         </Routes> 
       </main>
 

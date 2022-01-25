@@ -89,7 +89,7 @@ mauve: #e3cacf
 
 .button-container{
   display:flex;
-  margin-top: 150px;
+  margin-top: 10px;
   text-decoration: none;
 
 }
