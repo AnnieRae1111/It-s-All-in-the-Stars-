@@ -5,7 +5,7 @@ import {Container, Row } from 'reactstrap'
 
 const HoroscopesList = () => {
 const [horoscopes, setHoroscopes]= useState([])
-const [day, setDay] = useState("today")
+const [day, setDay] = useState("today")  // so functionality can be added when buttons are clicked to setDay
 
 const fetchHoroscopes = async (day, signName, image) => {
 
@@ -17,20 +17,17 @@ const fetchHoroscopes = async (day, signName, image) => {
             "x-rapidapi-key": process.env.REACT_APP_AZTRO_API_KEY
         }
     })
-    // console.log("Here is horoscopeResponse:", horoscopeResponse)
+    
     const horoscopeJson = await horoscopeResponse.json()
-
     horoscopeJson.sign = signName;
     horoscopeJson.image = image;
 
-    
-    // console.log("Here is horoscopeJson:", horoscopeJson)
-        setHoroscopes(horoscopes => [...horoscopes, horoscopeJson])
-        //when setting horoscopes im refering to the horscopes variable in use state 
-        //for this horoscopes array i want to keep everythign in there and then add new json data 
-        //how to add to an array in state react//
-        //make one array with all 12 horoscopes returned in it 
-        
+    setHoroscopes(horoscopes => [...horoscopes, horoscopeJson])
+    //when setting horoscopes im refering to the horscopes variable in use state 
+    //for this horoscopes array i want to keep everythign in there and then add new json data 
+    //how to add to an array in state react//
+    //this is so I can make one array with all 12 horoscopes returned in it 
+
     }
 
 
@@ -48,10 +45,9 @@ const fetchHoroscopes = async (day, signName, image) => {
 
     },[horoscopes])
 
-    console.log(horoscopes)
 
-const allHoroscopes = horoscopes.map((item) =>{         //do .map in this functiona andd return the function in jsx to render on the component
-    return(
+const allHoroscopes = horoscopes.map((item) =>{         //do .map in this function andd return the function in jsx to render on the component
+    return(                                             //returning one horoscope card for every sign 
         <HoroscopeCard 
         date_range={item.date_range}
         sign= {item.sign}
@@ -68,19 +64,19 @@ const clickYesterday = () => {
     setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
     setDay("yesterday")
 
-}
+    }
 
 const clickToday = () => {
-    setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
+    setHoroscopes([]) //set horoscops array to nothing so it only displays "today" when state is set 
     setDay("today")
 
-}
+    }   
 
 const clickTomorrow = () => {
-    setHoroscopes([]) //set horoscops array to nothing so it only displays "yesterday" when state is set 
+    setHoroscopes([]) //set horoscops array to nothing so it only displays "tomorrow" when state is set 
     setDay("tomorrow")
 
-} 
+    } 
 
 
 

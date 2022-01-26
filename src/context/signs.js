@@ -1,3 +1,5 @@
+//creating this array so I can add this data that wasn't included in the data provided by aztro 
+
 const signs = [
 
         { 

@@ -97,6 +97,15 @@ mauve: #e3cacf
 
 }
 
+.about-this-photo{
+  border-top: 2px solid black;
+  margin: 50px 60px 0 60px; 
+  padding: 2rem 0 0 0;
+  color:#f6f3e6;
+  text-transform: uppercase;
+
+}
+
 .link-buttons{
   text-decoration: none;
 }
@@ -113,9 +122,6 @@ mauve: #e3cacf
   height: 300px;
 }
 
-/* .horoscopes-container{
-  margin-top: 50px;
-} */
 
 .horoscopes-title{
   font-family: 'Playfair Display', serif;
@@ -135,22 +141,18 @@ mauve: #e3cacf
   outline:none;
   border: none;
   border: 1px solid lightblue;
-  /* background-color:  #50A0BF; */
   background-color: #f6f3e6;
   width:25%;
   flex-grow: 1;
   padding: 1rem;
   border-radius: 20px;
   font-size: 25px;
-  /* margin-top: 100px; */
   margin: 0 20px 0 20px;
 
   
 }
 
 button:hover {
-  /* box-shadow: 5px 10px 10px #888888; ; */
-  /* box-shadow: 5px 10px 10px black; */
   box-shadow: 5px 10px 10px lightblue;
 }
 
@@ -163,7 +165,6 @@ button:hover {
 .mb-2.text-muted.card-subtitle{
   margin-top: 1rem;
   margin-bottom: 1rem !important;
-  /* color: black !important; */
 }
 
 /*--------- NASA STUFF ---------*/
@@ -171,8 +172,8 @@ button:hover {
 .copyright-title-info,
 .photo-title-info {
   font-weight: 500;
-  /* color: black; */
   color:#f6f3e6;
+  font-size: 20px;
 
 }
 
@@ -218,14 +219,6 @@ button:hover {
   background-color: black;
 }
 
-.about-this-photo{
-  border-top: 2px solid black;
-  margin: 50px 60px 0 60px; 
-  padding: 1rem 0 0 0;
-  color:#f6f3e6;
-  text-transform: uppercase;
-
-}
 
 .photo-explanation{
   border-bottom: 2px solid black;

@@ -11,7 +11,7 @@ import {
 }
 from 'reactstrap'
 
-const HoroscopeCard = ({sign, mood, image, description, date_range, current_date, compatibility, color }) => {
+const HoroscopeCard = ({sign,image, description, date_range, current_date, compatibility }) => {
     
     return(
         <Col > 
