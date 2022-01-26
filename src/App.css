@@ -309,15 +309,22 @@ button:hover {
   .image-card{
     height: 50%;
   }
-  .photo-of-the-day{
+  .photo-of-the-day,
+  .divine-feminine{
     height: 325px;
     width: 295px;
   }
     
+  .about-text{
+    font-size: 18px; 
+  }
+
   .video-of-the-day{
 
     width: 80%;
   }
+
+ 
 
   }
 
