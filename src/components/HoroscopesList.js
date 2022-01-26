@@ -87,7 +87,7 @@ const clickTomorrow = () => {
         <Container>
     <div className="horoscopes-container">
         <h2 className="horoscopes-title">HOROSCOPES</h2>
-        <p className="this-week">What's in the stars for you this week? For centuries humans have looked to the stars for guidance and wisdom.  Click a button below to display this weeks daily horoscopes. </p>
+        <p className="this-week">Astrology is the study of the movement of the planets and the stars and how they influence us in our daily lives. For centuries humans have looked to the stars for guidance and wisdom. What's in the stars for you this week? Click a button below to display this weeks daily horoscopes. </p>
 
             <div className="button-container">
                 <button type="button" className="button yesterday" onClick={()=> {clickYesterday()}}>Yesterday</button>
