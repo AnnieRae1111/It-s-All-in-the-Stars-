@@ -31,9 +31,6 @@ mauve: #e3cacf
 
   body{
     background-color: #f6f3e6;
-   
-    /* background-color:#ACEBF2;
-    background-color: black; */
   }
 
   
@@ -54,12 +51,25 @@ mauve: #e3cacf
     background-image:url(https://i.imgur.com/vbGLu93.jpg);
   
   }
-  
+
+  /* .search-container{
+    width: 1100px;
+    display:flex;
+    justify-content: flex-end;
+  } */
+
+  /* .search-input{
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: .3rem;
+  justify-content: flex-end;
+} */
 
   .nav-item a {
     color: black;
-    justify-content: flex-end;
+  
   }
+
 
   .header{
     text-align: center;
@@ -298,6 +308,7 @@ button:hover {
     
   .about-text{
     font-size: 18px; 
+   
   }
 
   .video-of-the-day{

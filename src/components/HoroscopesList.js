@@ -7,6 +7,7 @@ const HoroscopesList = () => {
 const [horoscopes, setHoroscopes]= useState([])
 const [day, setDay] = useState("today")  // so functionality can be added when buttons are clicked to setDay
 
+
 const fetchHoroscopes = async (day, signName, image) => {
 
     const url = `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${signName}&day=${day}`

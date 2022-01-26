@@ -24,6 +24,13 @@ const Navigation = () => {
                 ABOUT
             </NavLink>
         </NavItem>
+        {/* <NavItem>
+            <div className="search-container">
+            <label>
+                <input className="search-input" type="text" placeholder="Search..."/>
+            </label>
+            </div>
+        </NavItem> */}
     </Nav>
 
     );

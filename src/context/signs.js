@@ -36,7 +36,7 @@ const signs = [
         
         },  
         { 
-        "name": "scorpio",
+        "name": "Scorpio",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         
         },  
