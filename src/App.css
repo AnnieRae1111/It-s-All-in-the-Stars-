@@ -132,8 +132,9 @@ mauve: #e3cacf
 
 .button{
   font-family: 'Playfair Display', serif;
-  outline: none;
-  border: 3px solidd #d29e45;
+  outline:none;
+  border: none;
+  border: 1px solid lightblue;
   /* background-color:  #50A0BF; */
   background-color: #f6f3e6;
   width:25%;
@@ -148,7 +149,9 @@ mauve: #e3cacf
 }
 
 button:hover {
-  box-shadow: 5px 10px 10px #888888; ;
+  /* box-shadow: 5px 10px 10px #888888; ; */
+  /* box-shadow: 5px 10px 10px black; */
+  box-shadow: 5px 10px 10px lightblue;
 }
 
 .horoscope-card{

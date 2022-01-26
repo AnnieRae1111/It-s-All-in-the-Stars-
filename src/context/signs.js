@@ -1,35 +1,35 @@
 const signs = [
 
         { 
-        "name": "aries",
+        "name": "Aries",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
 
         } , 
         { 
-        "name": "taurus",
+        "name": "Taurus",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         
         },    
         { 
-        "name": "gemini",
+        "name": "Gemini",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
 
         },  
         { 
-        "name": "cancer",
+        "name": "Cancer",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },  
         { 
-        "name": "leo",
+        "name": "Leo",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },  
         { 
-        "name": "virgo",
+        "name": "Virgo",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
 
         },  
         { 
-        "name": "libra",
+        "name": "Libra",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         
         },  
@@ -39,19 +39,19 @@ const signs = [
         
         },  
         { 
-        "name": "sagittarius",
+        "name": "Sagittarius",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },  
         { 
-        "name": "capricorn",
+        "name": "Capricorn",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },  
         { 
-        "name": "aquarius",
+        "name": "Aquarius",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },  
         { 
-        "name": "pisces",
+        "name": "Pisces",
         "image": "https://i.imgur.com/gqwa1Rw.jpg",
         },
                 
