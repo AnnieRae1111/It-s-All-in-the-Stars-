@@ -95,6 +95,7 @@ export const GlobalStyles = createGlobalStyle`
     .button{
         background-color:${props => props.theme.buttonColor};
         color: ${props=> props.theme.buttonFont}
+        border:${props => props.theme.buttonBorder}
 
     }
     .card-body{

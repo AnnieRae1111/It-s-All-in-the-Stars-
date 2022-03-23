@@ -7,15 +7,16 @@ import {
     Button,
 }
 from 'reactstrap'
-
+import Hamburger from './Hamburger';
 import Switch from './Switch';
 
-const Navigation = ({theme,isToggled, setIsToggled, themeToggler}) => {
-// const[isToggled, setIsToggled]=useState(false)
+const Navigation = ({isToggled,themeToggler}) => {
+    const [showMenu, setShowMenu]=useState(false)
 
-    return (  
-    <>
-    <Nav className="navigation-bar">
+    let hamburger 
+    
+    if(showMenu){
+    hamburger = <div>
         <NavItem>
             <NavLink className="left" href="/">
                 HOME
@@ -31,18 +32,56 @@ const Navigation = ({theme,isToggled, setIsToggled, themeToggler}) => {
                 ABOUT
             </NavLink>
         </NavItem>
-        {/* <NavItem>
-            <div className="search-container">
-            <label>
-                <input className="search-input" type="text" placeholder="Search..."/>
-            </label>
-            </div>
-        </NavItem> */}
-         {/* <Button id="change-theme-button" onToggle={()=>themeToggler()}><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></Button> */}
-         <NavItem className="toggle-switch"><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></NavItem>
-         {/* <Button id="change-theme-button" onClick={()=>themeToggler()}>Change Theme</Button> */}
+
+    </div>
+    }
+        
+
+    return (  
+    <>
+    <Nav className="navigation-bar">
+        <NavItem className="hambgurger">
+            <NavLink onClick={()=>setShowMenu(!showMenu)}><Hamburger /></NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink className="left" href="/">
+                HOME
+            </NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink className="left" href="/horoscopes">
+                HOROSCOPES
+            </NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink className="left" href="/about">
+                ABOUT
+            </NavLink>
+        </NavItem>
+        <NavItem className="toggle-switch"><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></NavItem>
     </Nav>
-    
+        {showMenu && 
+
+            <div>
+            <NavItem>
+                <NavLink className="left" href="/">
+                    HOME
+                </NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink className="left" href="/horoscopes">
+                    HOROSCOPES
+                </NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink className="left" href="/about">
+                    ABOUT
+                </NavLink>
+            </NavItem>
+
+        </div>
+        }
+        {/* {hamburger} */}
     </>
 
     );
