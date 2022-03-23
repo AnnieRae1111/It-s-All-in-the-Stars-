@@ -69,7 +69,12 @@ export const GlobalStyles = createGlobalStyle`
     .header-title, 
     .page-title-info{
         color:${props=>props.theme.fontColor};
+       
+    }
+
+    .header-title{
         text-shadow: ${props=>props.theme.textShadow};
+
     }
 
     // .photo-description-container{

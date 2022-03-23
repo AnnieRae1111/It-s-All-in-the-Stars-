@@ -54,7 +54,7 @@ mauve: #e3cacf
   button#change-theme-button{
     justify-content: flex-end;
     align-items: right;
-    margin-left:880px;
+    /* margin-left:880px; */
   }
 
   .nav{
@@ -163,7 +163,7 @@ mauve: #e3cacf
   font-family: 'Playfair Display', serif;
   outline:none;
   border: none;
-  border: 1px solid lightblue;
+  border: 4px solid lightblue;
   background-color: #f6f3e6;
   width:25%;
   flex-grow: 1;
