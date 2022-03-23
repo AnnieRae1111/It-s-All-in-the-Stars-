@@ -3,11 +3,13 @@ import {
     Nav, 
     NavItem, 
     NavLink, 
+    Button,
 }
 from 'reactstrap'
 
-const Navigation = () => {
+const Navigation = ({theme, themeToggler}) => {
     return (  
+    <>
     <Nav className="navigation-bar">
         <NavItem>
             <NavLink className="left" href="/">
@@ -31,7 +33,10 @@ const Navigation = () => {
             </label>
             </div>
         </NavItem> */}
+         <Button id="change-theme-button" onClick={()=>themeToggler()}>Change Theme</Button>
     </Nav>
+    
+    </>
 
     );
 }

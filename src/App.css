@@ -20,6 +20,16 @@ mauve: #e3cacf
 
 */
 
+.light{
+  background-color:#f6f3e6;
+  color:black
+}
+
+.dark{
+  background-color:black;
+  color: #f6f3e6;
+}
+
   
 
   
@@ -40,6 +50,12 @@ mauve: #e3cacf
   }
 
 /*--------- Nav and header ---------*/
+
+  button#change-theme-button{
+    justify-content: flex-end;
+    align-items: right;
+    margin-left:880px;
+  }
 
   .nav{
     border: 2px solid black;

@@ -41,15 +41,18 @@ const fetchHoroscopes = async (day, signName, image) => {
     }, [day]  )  //don't apply effect if there have been no changes to the day//
 
 
-    useEffect(()=> {
-        // console.log(horoscopes, "this should have all the horoscopes")
 
-    },[horoscopes])
+
+    // useEffect(()=> {
+    //     // console.log(horoscopes, "this should have all the horoscopes")
+
+    // },[horoscopes])
 
 
 const allHoroscopes = horoscopes.map((item) =>{         //do .map in this function andd return the function in jsx to render on the component
     return(                                             //returning one horoscope card for every sign 
         <HoroscopeCard 
+        key={item.id}
         date_range={item.date_range}
         sign= {item.sign}
         image = {item.image}
@@ -86,15 +89,14 @@ const clickTomorrow = () => {
         <>
         <section className="horoscopes-section">
         <Container>
-    <div className="horoscopes-container">
-        <h2 className="horoscopes-title">HOROSCOPES</h2>
-        <p className="this-week">Astrology is the study of the movement of the planets and the stars and how they influence us in our daily lives. For centuries humans have looked to the stars for guidance and wisdom. What's in the stars for you this week? Click a button below to display this weeks daily horoscopes. </p>
+            <div className="horoscopes-container">
+                <h2 className="horoscopes-title">HOROSCOPES</h2>
+                <p className="this-week">Astrology is the study of the movement of the planets and the stars and how they influence us in our daily lives. For centuries humans have looked to the stars for guidance and wisdom. What's in the stars for you this week? Click a button below to display this weeks daily horoscopes. </p>
 
             <div className="button-container">
                 <button type="button" className="button yesterday" onClick={()=> {clickYesterday()}}>Yesterday</button>
                 <button type="button" className="button today" onClick={()=> {clickToday()}}>Today</button>
                 <button type="button" className="button tomorrow"  onClick={()=> {clickTomorrow()}}>Tomorrow</button>
-            
         </div>
 
         <div>
