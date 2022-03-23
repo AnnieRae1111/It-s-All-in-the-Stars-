@@ -5,24 +5,27 @@ import Navigation from './components/Navigation';
 import { Route, Routes} from 'react-router-dom'
 import About from './components/About';
 import Main from './components/Main';
-import styled, { ThemeProvider } from "styled-components"
+import { ThemeProvider } from "styled-components"
 import {lightTheme, darkTheme, GlobalStyles } from './components/themes'
 import { useState } from 'react'
 
 
 
+
 function App() {
 const[theme, setTheme]= useState('light')
+const[isToggled, setIsToggled]=useState('false')
 
 const themeToggler = () => {
-  theme === 'light' ? setTheme('dark'): setTheme('light')
+  theme === 'light' ? setTheme('dark'): setTheme('light');
+  setIsToggled(!isToggled)
 }
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles/>
     <div id="app">
-      <Navigation them={theme} themeToggler={themeToggler}/>
+      <Navigation isToggled={isToggled} setIsToggled={setIsToggled} themeToggler={themeToggler}/>
       <main>
         <Routes>
           <Route path="/"element={<Main/>}/>

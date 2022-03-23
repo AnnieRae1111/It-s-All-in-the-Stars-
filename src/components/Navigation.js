@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState }from 'react'
+
 import {  
     Nav, 
     NavItem, 
@@ -7,7 +8,11 @@ import {
 }
 from 'reactstrap'
 
-const Navigation = ({theme, themeToggler}) => {
+import Switch from './Switch';
+
+const Navigation = ({theme,isToggled, setIsToggled, themeToggler}) => {
+// const[isToggled, setIsToggled]=useState(false)
+
     return (  
     <>
     <Nav className="navigation-bar">
@@ -33,7 +38,9 @@ const Navigation = ({theme, themeToggler}) => {
             </label>
             </div>
         </NavItem> */}
-         <Button id="change-theme-button" onClick={()=>themeToggler()}>Change Theme</Button>
+         {/* <Button id="change-theme-button" onToggle={()=>themeToggler()}><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></Button> */}
+         <NavItem className="toggle-switch"><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></NavItem>
+         {/* <Button id="change-theme-button" onClick={()=>themeToggler()}>Change Theme</Button> */}
     </Nav>
     
     </>

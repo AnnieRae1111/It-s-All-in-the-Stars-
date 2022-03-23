@@ -1,4 +1,4 @@
-import { createGlobalStyle, withTheme } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 export const lightTheme = {
     body:'#f6f3e6',
@@ -12,25 +12,29 @@ export const lightTheme = {
     fontColor:'black',
     backgroundColor:'#f6f3e6',
     navText:'black',
+    cardText:'black',
     
 }
 
 export const darkTheme = {
     body: 'black',
     color:' #f6f3e6',
-    imageCard:'black',
+    imageCard:'#f6f3e6',
     border: '2px solid #f6f3e6',
     borderTop:'4px solid #f6f3e6',
-    borderBottom:'4px solid #f6f3e6',
+    borderBottom:'none',
     buttonColor: 'black',
-    buttonFont:'white',
-    fontColor:'white',
-    textShadow: '8px 8px 6px #white',
+    buttonFont:'#f6f3e6',
+    fontColor:'#f6f3e6',
+    textShadow: '8px 8px 6px #f6f3e6',
     backgroundColor:'black',
     navBar:'black',
-    navText:'white',
-    buttonBorder:'white',
-    backgroundImage:'none'
+    navText:'#f6f3e6',
+    buttonBorder:'#f6f3e6',
+    backgroundImage:'none',
+    horoscopesBackground:'black',
+    cardText:'black',
+   
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -50,16 +54,9 @@ export const GlobalStyles = createGlobalStyle`
         color:${props=> props.theme.navText};
     }
 
-    #change-theme-button{
-        background-color:${props => props.theme.backgroundColor};
-        color:${props => props.theme.fontColor};
-        border: 2px solid ${props=>props.theme.buttonBorder};
-        border-radius: 10px ;
-        outline:none;
-    }
 
     .image-card{
-        background-color:${props => props.theme.imageCard};
+        background-color:${props => props.theme.body};
     }
 
     .photo-of-the-day{
@@ -69,7 +66,6 @@ export const GlobalStyles = createGlobalStyle`
     .header-title, 
     .page-title-info{
         color:${props=>props.theme.fontColor};
-       
     }
 
     .header-title{
@@ -96,20 +92,29 @@ export const GlobalStyles = createGlobalStyle`
         color: ${props=> props.theme.buttonFont};
     }
     
-    // .button{
-    //     background-color:${props => props.theme.buttonColor}
-    //     color: ${props=> props.theme.buttonFont}
+    .button{
+        background-color:${props => props.theme.buttonColor};
+        color: ${props=> props.theme.buttonFont}
 
-    // }
+    }
     .card-body{
-        background-color:${props => props.theme.body}
+        background-color:${props => props.theme.imageCard};
     }
 
     .card-title,
     h6,
     .card-text{
-        color:${props => props.theme.fontColor}!important;
+        color:${props => props.theme.cardText}!important;
     }
 
+    .horoscopes-section{
+        background-color:${props => props.theme.horoscopesBackground};
+        background-image:${props => props.theme.backgroundImage};
+    }
+
+    .horoscopes-title,
+    .this-week{
+        color:${props => props.theme.fontColor}
+    }
 
 `
