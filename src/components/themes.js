@@ -46,6 +46,7 @@ export const GlobalStyles = createGlobalStyle`
     .nav{
         background-color:${props=> props.theme.navBar};
         background-image:${props=> props.theme.backgroundImage};
+        border: 2px solid ${props => props.theme.fontColor};
         
 
     }
