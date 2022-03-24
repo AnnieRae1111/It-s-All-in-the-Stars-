@@ -45,7 +45,7 @@ if(!photo){
                             ? <iframe className="video-of-the-day" 
                             width="853"
                             height="480"
-                            src={`https://www.youtube.com/embed/s6IpsM_HNcU?rel=`}
+                            src={photo.url}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen

@@ -17,8 +17,17 @@ tan/background: #f6f3e6
 pale pink/buttons: #f5f0f0
 mauve: #e3cacf
 
-
 */
+
+@font-face {
+  font-family: 'Evangelina';
+  src: url('./font/EvangelinaRegular.woff2') format('woff2'),
+      url('./font/EvangelinaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 .light{
   background-color:#f6f3e6;
@@ -68,23 +77,6 @@ mauve: #e3cacf
   
   }
 
-  /* .toggle-switch{
-    align-self: flex-end;
-  } */
-
-  /* .search-container{
-    width: 1100px;
-    display:flex;
-    justify-content: flex-end;
-  } */
-
-  /* .search-input{
-  border-radius: 5px;
-  border: 1px solid black;
-  padding: .3rem;
-  justify-content: flex-end;
-} */
-
   .nav-item a {
     color: black;
   
@@ -101,7 +93,6 @@ mauve: #e3cacf
 
 .header-title{
   font-family: 'Playfair Display', serif;
-  /* font-family: 'Manrope', sans-serif; */
   color: black;
   text-shadow: 4px 4px 6px #464444;
   margin-top: 40px;
@@ -128,6 +119,7 @@ mauve: #e3cacf
 }
 
 .about-this-photo{
+  font-family: 'Playfair Display', serif;
   border-top: 2px solid black;
   margin: 50px 60px 0 60px; 
   padding: 2rem 0 0 0;

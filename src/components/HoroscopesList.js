@@ -52,7 +52,7 @@ const fetchHoroscopes = async (day, signName, image) => {
 const allHoroscopes = horoscopes.map((item) =>{         //do .map in this function andd return the function in jsx to render on the component
     return(                                             //returning one horoscope card for every sign 
         <HoroscopeCard 
-        key={item.id}
+        key={item.title}
         date_range={item.date_range}
         sign= {item.sign}
         image = {item.image}
