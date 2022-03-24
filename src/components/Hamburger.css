@@ -5,8 +5,8 @@
     justify-content:space-around;
     flex-flow: column nowrap;
     z-index:10;
-    visibility: hidden;
-    /* display:none; */
+    display:none;
+   
 }
 
 .hamburger:hover{
@@ -29,19 +29,31 @@
 @media only screen and (max-width: 500px){
 
     .hamburger{
-        /* display:block; */
-        /* position:fixed; */
+        display:inline-flex;
         visibility: visible;
         padding-top:10px;
         margin-left:10px;
         z-index: 10;
+        align-items: center;
         
     }
 
-    .slider.rounded, 
-    a.left.nav-link{
+    .nav-left{
         display:none;
+        justify-content: flex-start;
     }
+  
+    .nav{
+        display:flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+       
+    }
+
+  
+    
+  
+
 
 
 

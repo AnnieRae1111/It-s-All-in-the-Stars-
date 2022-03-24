@@ -54,6 +54,9 @@ export const GlobalStyles = createGlobalStyle`
         color:${props=> props.theme.navText};
     }
 
+    .burger{
+        background:${props => props.theme.fontColor}
+    }
 
     .image-card{
         background-color:${props => props.theme.body};

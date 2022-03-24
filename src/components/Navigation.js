@@ -4,7 +4,7 @@ import {
     Nav, 
     NavItem, 
     NavLink, 
-    Button,
+
 }
 from 'reactstrap'
 import Hamburger from './Hamburger';
@@ -13,72 +13,50 @@ import Switch from './Switch';
 const Navigation = ({isToggled,themeToggler}) => {
     const [showMenu, setShowMenu]=useState(false)
 
-    let hamburger 
-    
-    if(showMenu){
-    hamburger = <div>
-        <NavItem>
-            <NavLink className="left" href="/">
-                HOME
-            </NavLink>
-        </NavItem>
-        <NavItem>
-            <NavLink className="left" href="/horoscopes">
-                HOROSCOPES
-            </NavLink>
-        </NavItem>
-        <NavItem>
-            <NavLink className="left" href="/about">
-                ABOUT
-            </NavLink>
-        </NavItem>
-
-    </div>
-    }
-        
 
     return (  
     <>
     <Nav className="navigation-bar">
-        <NavItem className="hambgurger">
+        {/* <NavItem className="hambgurger">
             <NavLink onClick={()=>setShowMenu(!showMenu)}><Hamburger /></NavLink>
-        </NavItem>
+        </NavItem> */}
         <NavItem>
-            <NavLink className="left" href="/">
+            <NavLink className="nav-left" href="/">
                 HOME
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink className="left" href="/horoscopes">
+            <NavLink className="nav-left" href="/horoscopes">
                 HOROSCOPES
             </NavLink>
         </NavItem>
         <NavItem>
-            <NavLink className="left" href="/about">
+            <NavLink className="nav-left" href="/about">
                 ABOUT
             </NavLink>
         </NavItem>
         <NavItem className="toggle-switch"><Switch rounded={true} isToggled={isToggled} onToggle={()=>themeToggler()}/></NavItem>
+        <NavItem className="hambgurger">
+            <NavLink onClick={()=>setShowMenu(!showMenu)}><Hamburger /></NavLink>
+        </NavItem>
     </Nav>
         {showMenu && 
-
-            <div>
+            <div className="hamburger-menu">
             <NavItem>
-                <NavLink className="left" href="/">
+                <NavLink className="ham-left" href="/">
                     HOME
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink className="left" href="/horoscopes">
+                <NavLink className="ham-left" href="/horoscopes">
                     HOROSCOPES
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink className="left" href="/about">
+                <NavLink className="ham-left" href="/about">
                     ABOUT
                 </NavLink>
             </NavItem>
-
         </div>
         }
         {/* {hamburger} */}
