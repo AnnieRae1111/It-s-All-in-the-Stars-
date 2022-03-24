@@ -62,7 +62,8 @@ export const GlobalStyles = createGlobalStyle`
         background-color:${props => props.theme.body};
     }
 
-    .photo-of-the-day{
+    .photo-of-the-day,
+    .divine-feminine{
         border: ${props=> props.theme.border};
     }
 
@@ -75,10 +76,6 @@ export const GlobalStyles = createGlobalStyle`
         text-shadow: ${props=>props.theme.textShadow};
 
     }
-
-    // .photo-description-container{
-    //     background-color:${props=> props.theme.photoDescription};
-    // }
 
     .about-this-photo{
         border-top:${props=>props.theme.borderTop};
@@ -120,5 +117,11 @@ export const GlobalStyles = createGlobalStyle`
     .this-week{
         color:${props => props.theme.fontColor}
     }
+
+    .thankyou-for-visiting, 
+    .about-text{
+        color:${props => props.theme.fontColor}
+    }
+
 
 `

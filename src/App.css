@@ -179,8 +179,9 @@ mauve: #e3cacf
   
 }
 
-button:hover {
-  box-shadow: 5px 10px 10px lightblue;
+button:hover,
+.horoscope-card:hover {
+  box-shadow: 5px 20px 20px lightblue;
 }
 
 .horoscope-card{
@@ -189,9 +190,12 @@ button:hover {
   margin-top: 50px;
 }
 
+
+
 .mb-2.text-muted.card-subtitle{
   margin-top: 1rem;
   margin-bottom: 1rem !important;
+  color:black !important;
 }
 
 /*--------- NASA STUFF ---------*/
