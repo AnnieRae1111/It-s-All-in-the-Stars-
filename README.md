@@ -1,3 +1,5 @@
+Please go to master branch for code base. 
+
 # It-s-All-in-the-Stars-
 
 Check out the app here: https://its-all-in-the-stars.netlify.app/
