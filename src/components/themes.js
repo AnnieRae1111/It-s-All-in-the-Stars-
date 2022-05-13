@@ -1,41 +1,41 @@
-    import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-    export const lightTheme = {
-    body: '#f6f3e6',
-    color: '#f6f3e6',
-    imageCard: '#f6f3e6',
-    border: '2px solid black',
-    photoDescription: '#9FB0BF',
-    borderTop: 'none',
-    borderBottom: 'red',
-    buttonColor: '#f6f3e6',
-    fontColor: 'black',
-    backgroundColor: '#f6f3e6',
-    navText: 'black',
-    cardText: 'black',
-    };
+export const lightTheme = {
+	body: '#f6f3e6',
+	color: '#f6f3e6',
+	imageCard: '#f6f3e6',
+	border: '2px solid black',
+	photoDescription: '#9FB0BF',
+	borderTop: 'none',
+	borderBottom: 'red',
+	buttonColor: '#f6f3e6',
+	fontColor: 'black',
+	backgroundColor: '#f6f3e6',
+	navText: 'black',
+	cardText: 'black',
+};
 
-    export const darkTheme = {
-    body: 'black',
-    color: ' #f6f3e6',
-    imageCard: '#f6f3e6',
-    border: '2px solid #f6f3e6',
-    borderTop: '4px solid #f6f3e6',
-    borderBottom: 'none',
-    buttonColor: 'black',
-    buttonFont: '#f6f3e6',
-    fontColor: '#f6f3e6',
-    textShadow: '8px 8px 6px #f6f3e6',
-    backgroundColor: 'black',
-    navBar: 'black',
-    navText: '#f6f3e6',
-    buttonBorder: '#f6f3e6',
-    backgroundImage: 'none',
-    horoscopesBackground: 'black',
-    cardText: 'black',
-    };
+export const darkTheme = {
+	body: 'black',
+	color: ' #f6f3e6',
+	imageCard: '#f6f3e6',
+	border: '2px solid #f6f3e6',
+	borderTop: '4px solid #f6f3e6',
+	borderBottom: 'none',
+	buttonColor: 'black',
+	buttonFont: '#f6f3e6',
+	fontColor: '#f6f3e6',
+	textShadow: '8px 8px 6px #f6f3e6',
+	backgroundColor: 'black',
+	navBar: 'black',
+	navText: '#f6f3e6',
+	buttonBorder: '#f6f3e6',
+	backgroundImage: 'none',
+	horoscopesBackground: 'black',
+	cardText: 'black',
+};
 
-    export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
         
         body{
             background-color: ${(props) => props.theme.body};

@@ -1,13 +1,13 @@
-    import Header from './Header';
-    import HoroscopesList from './HoroscopesList';
+import Header from './Header';
+import HoroscopesList from './HoroscopesList';
 
-    const Main = () => {
-    return (
-        <>
-        <Header />
-        <HoroscopesList />
-        </>
-    );
-    };
+const Main = () => {
+	return (
+		<>
+			<Header />
+			<HoroscopesList />
+		</>
+	);
+};
 
-    export default Main;
+export default Main;
