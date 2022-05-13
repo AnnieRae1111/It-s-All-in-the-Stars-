@@ -1,7 +1,7 @@
 Link to app: https://its-all-in-the-stars.netlify.app/
 
 Project Description: 
-My app is called It's All in the Stars. It's an app for adding insight and inspiration to your morning through daily horoscopes and a daily astronomy picture of the day provied by Nasa's APOD API. In the future, I'd like to bring in other components such as yoga videos and healthy tonic recipes to make the app a more well-rounded wellness application. 
+My app is called It's All in the Stars. It's an app for adding insight and inspiration to your morning through daily horoscopes and a daily astronomy picture of the day provied by Nasa's APOD API. In the future, I'd like to bring in other components such as yoga videos and healthy tonic recipes to make the app a more well-rounded wellness application. Dark mode feature recently added. 
 This app will use NASA's APOD API and the aztro API. 
 
 WireFrames: 
