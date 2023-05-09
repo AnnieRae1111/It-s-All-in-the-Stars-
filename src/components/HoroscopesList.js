@@ -7,46 +7,6 @@ const HoroscopesList = () => {
 	const [horoscopes, setHoroscopes] = useState([]);
 	const [day, setDay] = useState('today');
 
-	//Deprecatecd API
-	// const fetchHoroscopes = async (day, signName, image) => {
-	// 	const url = `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${signName}&day=${day}`;
-	// 	const horoscopeResponse = await fetch(url, {
-	// 		method: 'POST',
-	// 		headers: {
-	// 			'x-rapidapi-host': 'sameer-kumar-aztro-v1.p.rapidapi.com',
-	// 			'x-rapidapi-key': process.env.REACT_APP_AZTRO_API_KEY,
-	// 		},
-	// 	});
-
-	///------------/////
-
-	// This works but need to make only 1 api call
-	// const fetchHoroscopes = async (day, signName, image) => {
-	// 	// const url = `https://sameer-kumar-aztro-v1.p.rapidapi.com/?sign=${signName}&day=${day}`;
-	// 	const url = `https://horostory.p.rapidapi.com/horoscope?sign=${signName}&date=${day}`;
-	// 	const horoscopeResponse = await fetch(url, {
-	// 		method: 'GET',
-	// 		headers: {
-	// 			'x-rapidapi-host': 'horostory.p.rapidapi.com',
-	// 			'x-rapidapi-key': '9541da9a38mshccddc47c3ebacf3p126708jsn5621aaa8b36b',
-	// 		},
-	// 	});
-
-	// 	const horoscopeJson = await horoscopeResponse.json();
-	// 	horoscopeJson.sign = signName;
-	// 	horoscopeJson.image = image;
-	// 	console.log(horoscopeJson, 'horoscopjson response');
-	// 	setHoroscopes((horoscopes) => [...horoscopes, horoscopeJson]);
-	// 	//creating a new array with all 12 horoscopes
-	// 	//using spread operator to take all current horoscopes plus the new one until there are all 12
-	// };
-
-	// useEffect(() => {
-	// 	signs.forEach((sign) => {
-	// 		fetchHoroscopes(day, sign.name, sign.image); //mapping over signs.json array
-	// 	});
-	// }, [day]);
-
 	const fetchHoroscopes = async (day, signNames, images, dateRange) => {
 		const requests = signNames.map((signName) => ({
 			url: `https://horostory.p.rapidapi.com/horoscope?sign=${signName}&date=${day}`,
@@ -110,7 +70,6 @@ const HoroscopesList = () => {
 				image={item.image}
 				compatibility={item.compatibility}
 				description={item.description}
-				// current_date={item.current_date}
 			/>
 		);
 	});
