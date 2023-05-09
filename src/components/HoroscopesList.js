@@ -47,7 +47,7 @@ const HoroscopesList = () => {
 	// 	});
 	// }, [day]);
 
-	const fetchHoroscopes = async (day, signNames, images) => {
+	const fetchHoroscopes = async (day, signNames, images, dateRange) => {
 		const requests = signNames.map((signName) => ({
 			url: `https://horostory.p.rapidapi.com/horoscope?sign=${signName}&date=${day}`,
 			headers: {
@@ -78,6 +78,7 @@ const HoroscopesList = () => {
 				batchHoroscopes.forEach((horoscopeJson, i) => {
 					horoscopeJson.sign = signNames[currentIndex - 10 + i];
 					horoscopeJson.image = images[currentIndex - 10 + i];
+					horoscopeJson.dateRange = dateRange[currentIndex - 10 + i];
 				});
 
 				horoscopeJsons.push(...batchHoroscopes);
@@ -95,20 +96,21 @@ const HoroscopesList = () => {
 	useEffect(() => {
 		const signNames = signs.map((sign) => sign.name);
 		const images = signs.map((sign) => sign.image);
+		const dateRange = signs.map((sign) => sign.dateRange);
 
-		fetchHoroscopes(day, signNames, images);
+		fetchHoroscopes(day, signNames, images, dateRange);
 	}, [day]);
 
 	const allHoroscopes = horoscopes.map((item) => {
 		return (
 			<HoroscopeCard
 				key={item.date_range}
-				date_range={item.date_range}
+				date_range={item.dateRange}
 				sign={item.sign}
 				image={item.image}
 				compatibility={item.compatibility}
 				description={item.description}
-				current_date={item.current_date}
+				// current_date={item.current_date}
 			/>
 		);
 	});

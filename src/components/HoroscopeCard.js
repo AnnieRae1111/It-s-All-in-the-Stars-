@@ -26,9 +26,9 @@ const HoroscopeCard = ({
 						<CardTitle tag='h5'>
 							<strong>Sign:</strong> {sign}
 						</CardTitle>
-						<CardSubtitle className='mb-2 text-muted' tag='h6'>
+						{/* <CardSubtitle className='mb-2 text-muted' tag='h6'>
 							<strong>Current Date:</strong> {current_date}
-						</CardSubtitle>
+						</CardSubtitle> */}
 						<CardText>
 							<strong>Date Range:</strong> {date_range}
 						</CardText>
