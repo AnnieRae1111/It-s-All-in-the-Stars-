@@ -51,7 +51,7 @@ const Header = () => {
 								width='853'
 								height='480'
 								src={photo.url}
-								frameBorder='0'
+								// frameBorder='0'
 								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 								allowFullScreen
 								title='Embedded youtube'
